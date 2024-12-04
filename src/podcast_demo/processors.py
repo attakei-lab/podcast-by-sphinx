@@ -30,7 +30,7 @@ def generate_podcast_feed(app: Sphinx, exc: Exception | None = None):
         fg_entry.link(href=entry.link)
         fg_entry.title(entry.title)
         fg_entry.description(entry.summary)
-        fg_entry.pubDate(entry.updated.strftime("%a, %d %b %Y %H:%M:%S JST"))
+        fg_entry.pubDate(entry.updated.strftime("%a, %d %b %Y %H:%M:%S +0900"))
         fg_entry.enclosure(
             entry.media_url,
             type="audio/mp3",
