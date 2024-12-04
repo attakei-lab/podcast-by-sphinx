@@ -20,6 +20,7 @@ def generate_podcast_feed(app: Sphinx, exc: Exception | None = None):
             continue
     fg = FeedGenerator()
     fg.load_extension("podcast")
+    fg.language("ja")
     fg.id(feed.link)
     fg.title(feed.title)
     fg.link(href=feed.link, rel="alternate")

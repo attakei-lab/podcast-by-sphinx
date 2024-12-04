@@ -30,8 +30,8 @@ def generate_entry(app: Sphinx, docname: str) -> Entry | None:
     audio_ = audio_candicates[0]
     uri = audio_["uri"]
     if uri in builder.images:
-        audio_uri = Path(builder.imgpath) / quote(builder.images[uri])
-        audio_url = Path(app.config.html_baseurl) / audio_uri
+        audio_uri = builder.imgpath + "/" + quote(builder.images[uri])
+        audio_url = app.config.html_baseurl + "/" + audio_uri
         return Entry(
             **asdict(entry_base),
             media_url=str(audio_url),
