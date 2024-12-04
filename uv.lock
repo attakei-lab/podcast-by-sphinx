@@ -24,16 +24,16 @@ wheels = [
 
 [[package]]
 name = "atsphinx-feed"
-version = "0.1.1"
+version = "0.1.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "atsphinx-og-article" },
     { name = "feedgen" },
     { name = "sphinx" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ee/42/9e69b3b63ce509fc868e860a1183c4bd75fad4fb7407f4082403dd68d72e/atsphinx_feed-0.1.1.tar.gz", hash = "sha256:92929c1ebe08a7e188ab105c3b1920f5d6f98feb69169e57829b586ffaa6e564", size = 10683 }
+sdist = { url = "https://files.pythonhosted.org/packages/f0/d3/b3bdecdd477007e8862956557aef74a81fe0d37ace5f34a40fa7991ca8a8/atsphinx_feed-0.1.2.tar.gz", hash = "sha256:8386114636f2e629766eb7ad871280f82e62ce29fc5f3e23a131870e8094a85f", size = 38070 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cf/3b/de7cbd51c96a4800ceedbf3f5005aeeba5f3d91b6262977debfd6e4bff61/atsphinx_feed-0.1.1-py2.py3-none-any.whl", hash = "sha256:92a2c275f63905437e5ce1c950ef96348f1e3e729bb87f0f4345cd0b3786506f", size = 7585 },
+    { url = "https://files.pythonhosted.org/packages/92/ba/b98bc99343843d8d20942c31a94829030c47bd46836a9bb20b2cd0ea88e4/atsphinx_feed-0.1.2-py3-none-any.whl", hash = "sha256:09eb30b7d02eca19ca507e6fc0a153193ff2f97d98b0cf32b2e5732d35fbaa58", size = 7597 },
 ]
 
 [[package]]
