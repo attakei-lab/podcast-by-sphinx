@@ -17,6 +17,8 @@ release = "0"
 extensions = [
     "sphinx.ext.githubpages",
     "atsphinx.audioplayer",
+    "atsphinx.feed",
+    "atsphinx.og_article",
     "rst_package_refs.sphinx",
 ]
 
@@ -30,3 +32,5 @@ language = "ja"
 
 html_theme = "furo"
 html_static_path = ["_static"]
+
+html_baseurl = "http://localhost:8002"
