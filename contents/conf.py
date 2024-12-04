@@ -20,6 +20,7 @@ extensions = [
     "atsphinx.feed",
     "atsphinx.og_article",
     "rst_package_refs.sphinx",
+    "podcast_demo",
 ]
 
 templates_path = ["_templates"]
