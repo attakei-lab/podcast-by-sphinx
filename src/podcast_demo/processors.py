@@ -22,14 +22,13 @@ def generate_podcast_feed(app: Sphinx, exc: Exception | None = None):
     fg.id(feed.link)
     fg.title(feed.title)
     fg.link(href=feed.link, rel="alternate")
-    fg.description("sss")
+    fg.description("Demo")
     for entry in feed.entries:
         fg_entry = fg.add_entry()
         fg_entry.id(entry.link)
         fg_entry.link(href=entry.link)
         fg_entry.title(entry.title)
         fg_entry.description(entry.summary)
-        fg_entry.enclosure(entry.media)
-        fg.add_entry(fg_entry)
+        fg_entry.enclosure(entry.media, type="audio/mpeg")
     out_path = Path(app.outdir) / "podcast.xml"
     fg.rss_file(out_path)
