@@ -23,7 +23,7 @@ jobs:
           uv sync --frozen --all-extras
       - name: 'Build site'
         run: |
-          task setup docs:build
+          task setup build
       - name: 'Upload artifact'
         uses: actions/upload-pages-artifact@v3
         with:
