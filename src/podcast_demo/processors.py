@@ -19,6 +19,7 @@ def generate_podcast_feed(app: Sphinx, exc: Exception | None = None):
         except ValueError:
             continue
     fg = FeedGenerator()
+    fg.load_extension("podcast")
     fg.id(feed.link)
     fg.title(feed.title)
     fg.link(href=feed.link, rel="alternate")
@@ -29,6 +30,11 @@ def generate_podcast_feed(app: Sphinx, exc: Exception | None = None):
         fg_entry.link(href=entry.link)
         fg_entry.title(entry.title)
         fg_entry.description(entry.summary)
-        fg_entry.enclosure(entry.media, type="audio/mpeg")
+        fg_entry.pubDate(entry.updated.strftime("%a, %d %b %Y %H:%M:%S JST"))
+        fg_entry.enclosure(
+            entry.media_url,
+            type="audio/mp3",
+            length=entry.media_realpath.stat().st_size,
+        )
     out_path = Path(app.outdir) / "podcast.xml"
-    fg.rss_file(out_path)
+    fg.rss_file(out_path, pretty=True)

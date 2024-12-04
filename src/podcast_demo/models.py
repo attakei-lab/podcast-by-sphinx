@@ -1,5 +1,4 @@
 from dataclasses import dataclass, asdict
-from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
 
@@ -12,7 +11,8 @@ from sphinx.application import Sphinx
 class Entry(feed_models.Entry):
     """Data for entry in Atom feed."""
 
-    media: str
+    media_url: str
+    media_realpath: Path
 
 
 @dataclass
@@ -32,4 +32,8 @@ def generate_entry(app: Sphinx, docname: str) -> Entry | None:
     if uri in builder.images:
         audio_uri = Path(builder.imgpath) / quote(builder.images[uri])
         audio_url = Path(app.config.html_baseurl) / audio_uri
-        return Entry(**asdict(entry_base), media=str(audio_url))
+        return Entry(
+            **asdict(entry_base),
+            media_url=str(audio_url),
+            media_realpath=app.srcdir / uri,
+        )
