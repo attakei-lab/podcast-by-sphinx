@@ -1,10 +1,10 @@
-Demo documentation
+Podcast by Sphinx!
 ==================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+このサイトは、Sphinxでポッドキャスト配信サイトを構築するためのデモです。
+下記のURLを登録すると、1個だけデモのエピソードが配信されています。
 
+https://attakei-lab.github.io/podcast-by-sphinx/podcast.xml
 
 .. toctree::
    :maxdepth: 2

@@ -33,5 +33,5 @@ language = "ja"
 
 html_theme = "furo"
 html_static_path = ["_static"]
-
-html_baseurl = "https://attakei-lab.github.io/podcast-demo"
+html_title = "SphinxCast (demo)"
+html_baseurl = "https://attakei-lab.github.io/podcast-by-sphinx"
